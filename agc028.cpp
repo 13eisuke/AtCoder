@@ -42,8 +42,6 @@ int main()
     k = lcm(a, b);
 
     for(ll i=0; i<tmp; i+=k){
-        //if(i > min(M, N) - 1)break;
-        //cout << i << endl;
         if(S[i/a] != T[i/b]){
             cout << "-1" << endl;
             return 0;
