@@ -23,7 +23,7 @@ int main()
         pair_vec.push_back(pair(tmp1, tmp2));
     }
 
-    std::sort(
+    sort(
         pair_vec.begin(),
         pair_vec.end(),
         [](const pair& x, const pair& y){return x.first < y.first;}
