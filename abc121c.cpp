@@ -4,9 +4,10 @@
 #include <string.h>
 #include <vector>
 
+using namespace std;
 typedef long long ll;
 
-using namespace std;
+#define pll pair<ll,ll>
 
 int main()
 {
@@ -14,32 +15,27 @@ int main()
     ll ans = 0;
     cin >> N >> M;
 
-    typedef pair<ll, ll> pair;
-    vector<pair> pair_vec;
+    vector <pll> ab(N);
 
     for (int i = 0; i < N; i++) {
-        ll tmp1, tmp2;
-        cin >> tmp1 >> tmp2;
-        pair_vec.push_back(pair(tmp1, tmp2));
+        cin >> ab[i].first >> ab[i].second;
     }
 
-    sort(
-        pair_vec.begin(),
-        pair_vec.end(),
-        [](const pair& x, const pair& y){return x.first < y.first;}
-    );
-    tmp = M;
-    for(auto& i: pair_vec){
-        if (tmp - i.second >= 0) {
-            ans += i.first * i.second;
-            tmp -= i.second;
+    sort(ab.begin(), ab.end());
+
+    int i = 0;
+
+    while (M > 0) {
+        if (M >= ab[i].second) {
+            M -= ab[i].second;
+            ans += ab[i].first * ab[i].second;
         }
         else {
-            ans += tmp*i.first;
-            break;
+            ans += ab[i].first * M;
+            M = 0;
         }
+        i++;
     }
-
     cout << ans << endl;
     
     return 0;
