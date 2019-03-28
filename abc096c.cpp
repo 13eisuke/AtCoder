@@ -9,25 +9,25 @@ using namespace std;
 
 int main()
 {
-    ll N, med, sum = 0;
-    cin >> N;
-    vector <ll> a(N, 0);
+    int H, W, cnt = 0;
+    char s[55][55];
 
-    for (ll i = 0; i < N; i++) {
-        cin >> a[i];
-        a[i] -= i + 1;
+    cin >> H >> W;
+
+    for (int i = 1; i <= H; i++) {
+        for (int j = 1; j <= W; j++) {
+            cin >> s[i][j];
+        }
     }
 
-    sort(a.begin(), a.end());
-
-    if (N%2 == 0) med = (a[N/2] + a[N/2-1])/2;
-    else med = a[(N - 1)/2];
-
-    for (int i = 0; i < N; i++) {
-        sum += abs(a[i] - med);
+    for (int i = 1; i <= H; i++) {
+        for (int j = 1; j <= W; j++) {
+            if (s[i][j] == '#' && s[i-1][j] != '#' && s[i+1][j] != '#' && s[i][j-1] != '#' && s[i][j+1] != '#') cnt++;
+        }
     }
 
-    cout << sum << endl;
+    if (cnt == 0) cout << "Yes" << endl;
+    else cout <<  "No" << endl;
 
     return 0;
 }
