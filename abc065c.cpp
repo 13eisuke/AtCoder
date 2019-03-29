@@ -14,7 +14,7 @@ int main()
     ll ans=1;
 
     cin >> N >> M;
-
+     
     if (abs(N - M) >= 2) cout << 0 << endl;
     else if (N + 1 == M) {
         for (int i = 1; i <= N; i++) {
