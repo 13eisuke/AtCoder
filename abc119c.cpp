@@ -11,8 +11,8 @@ int l[1004];
 
 int dfs(int cur, int a, int b, int c) {
     if (cur == N) {
-        if (min(A, min(B, C)) > 0) return abs(a - A) + abs(b - B) + abs(c - C) - 30;
-	    else return 100000000;
+        if (min(a, min(b, c)) > 0) return abs(a - A) + abs(b - B) + abs(c - C) - 30;
+	    else return 1000000000;
 	}
     int ret[4] = {0};
 
