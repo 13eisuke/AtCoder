@@ -26,7 +26,6 @@ int main() {
         }
         if (cnt == 2) break;
     }
-
     if (cnt < 2) cout << 0 << endl;
     else cout << x[0] * x[1] << endl;
 
