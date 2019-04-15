@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-    int n, count = 0;
+    int n, now = 0, ans = 0;
     cin >> n;
 
     vector <int> h(n, 0);
@@ -18,16 +18,13 @@ int main()
     }
 
     for (int i = 0; i < n; i++) {
-        while (h[i] > 0) {
-            count++;
-            for (int j = i; j < n; j++) {
-                if (h[j] > 0) h[j]--;
-                else break;
-            }
+        if (h[i] > now) {
+            ans += h[i] - now;
         }
+        now = h[i];
     }
 
-    cout << count << endl;
+    cout << ans << endl;
 
     return 0;
 }
