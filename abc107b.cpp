@@ -14,25 +14,25 @@ int main()
     
     cin >> h >> w;
 
-    for(int i = 0; i<h; i++){
-        for(int j=0; j<w; j++){
+    for (int i = 0; i < h; i++){
+        for (int j=0; j < w; j++){
             cin >> a[i][j];
         }
     }
 
-    for(int i = 0; i<w; i++){
-        for(int j=0; j<h; j++){
-            if(a[i][j] == '#') {
+    for (int i = 0; i < h; i++){
+        for (int j = 0; j < w; j++){
+            if (a[i][j] == '#') {
                 b[i] = 1;
                 c[j] = 1;
             }
         }
     }
 
-    for(int i=0; i<h; i++){
-        if(b[i]>0){
-            for(int j=0; j<w; j++){
-                if(c[j]>0)cout << a[i][j];
+    for (int i = 0; i < h; i++){
+        if (b[i] > 0) {
+            for (int j = 0; j < w; j++){
+                if (c[j] > 0) cout << a[i][j];
             }
             cout << endl;
         }
