@@ -17,14 +17,13 @@ int main()
 
     for (double i = 1; i <= N; i++) {
         double x = i;
-        ans = 1.0;
+        y = 1.0;
         while (x < K) {
             x *= 2.0;
-            ans *= 1.0/2.0;
-            //cout << ans << endl;
+            y *= 1.0/2.0;
         }
-        y += 1.0/N*ans;
+        ans += 1.0/N*y;
     }
-    cout << setprecision(12) <<  y << endl;
+    cout << setprecision(12) << ans << endl;
     return 0;
 }
