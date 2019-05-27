@@ -1,9 +1,9 @@
 #include <bits/stdc++.h>
 #include <bitset>
 using namespace std;
-
+ 
 typedef long long ll;
-
+ 
 int main()
 {
     int N, M, tmp, ans = 0;
@@ -29,6 +29,7 @@ int main()
             for (int j = 0; j < k[i]; j++) {
                 if (bit & 1<<(s[i][j]-1)) cnt++;
             }
+            //cout << cnt << endl;
             if (cnt%2 != p[i]) x = false;
         }
         if (x) ans++;
