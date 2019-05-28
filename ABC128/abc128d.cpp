@@ -11,11 +11,11 @@ int main()
     vector<int> V(N);
     for (int i = 0; i < N; i++) cin >> V[i];
  
-    ll ans = (int)-1E9;
+    ll ans = (int)-1e9;
  
-    for (int l = 0; l < K+1; l++) {
-        for (int r = 0; r < K+1; r++) {
-            if (min(K, N) < l + r)
+    for (int l = 0; l < K + 1; l++) {
+        for (int r = 0; r < K + 1; r++) {
+            if (l + r > min(K, N))
                 break;
             vector<int> a;
             for (int i = 0; i < l; i++) { a.push_back(V[i]); }
