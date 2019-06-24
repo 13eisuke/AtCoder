@@ -9,7 +9,7 @@ int main()
     int N;
     ll now = 0;
     cin >> N;
-    vector < pair<ll, ll> >  X(N);
+    vector < pair<ll, ll> > X(N);
 
     for (int i = 0; i < N; i++) {
         cin >> X[i].second >> X[i].first;
