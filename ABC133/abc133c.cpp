@@ -13,7 +13,7 @@ int main()
     ll L, R, mi = 1LL<<60;
     cin >> L >> R;
 
-    if (R - L > 2019) {
+    if (R - L >= 2019) {
         cout << 0 << endl;
         return 0;
     } else {
