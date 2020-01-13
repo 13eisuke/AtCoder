@@ -10,7 +10,8 @@ int main()
 {
     char s;
     cin >> s;
-    printf("%c", s+1);
+    s++;
+    cout << s << endl;
     return 0;
 }
 
