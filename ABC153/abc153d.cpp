@@ -10,6 +10,14 @@ typedef pair<ll, ll> P;
 
 int main()
 {
+    ll h, sum=0, cnt = 1;
+    cin >> h;
+    while (h) {
+        h /= 2;
+        sum += cnt;
+        cnt *= 2;
+    }
+    cout << sum << endl;
     return 0;
 }
 
