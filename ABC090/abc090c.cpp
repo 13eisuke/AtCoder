@@ -25,6 +25,15 @@ template<class T> inline bool chmax(T& a, T b) {
 
 int main()
 {
+    ll N, M;
+    cin >> N >> M;
+    if (N > M) swap(N, M);
+
+    if (N == 1) {
+        if (M == 1) cout << 1 << endl;
+        else cout << M - 2 << endl;
+    } else cout << (N-2)*(M-2) << endl;
+
     return 0;
 }
 
