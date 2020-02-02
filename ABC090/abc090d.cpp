@@ -13,6 +13,21 @@ template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; }
 
 int main()
 {
-    return 0;
-}
+	ll N, K;
+	cin >> N >> K;
+	ll res = 0;
+	for (ll i = 1; i <= N; i++) {
+		ll p = N / i;
+		ll r = N % i;
+		ll temp = max(0LL, i - K);
+		res += p * temp;
+		res += max(0LL, r - K + 1);
+	}
+    
+	if (K == 0) {
+		res -= N;
+	}
 
+	cout << res << endl;
+	return 0;
+}
