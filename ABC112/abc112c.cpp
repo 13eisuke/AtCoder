@@ -15,7 +15,6 @@ int main()
 
     for(int i=0; i<n; i++){
         cin >> x[i] >> y[i] >> h[i];
-
     }
  
     for(ll i=0; i<=100; i++){
