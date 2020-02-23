@@ -14,15 +14,6 @@ const int dy[4] = {0, 1, 0, -1};
 template<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b; return 1; } return 0; }
 template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }
 
-ll PowMod_RepeatSquaring(ll N, ll P, ll M) {
-    if (P == 0) return 1;
-    if (P%2 == 0) {
-        ll t = PowMod_RepeatSquaring(N, P/2, M);
-        return t*t % M;
-    }
-    return N * PowMod_RepeatSquaring(N, P-1, M);
-}
-
 ll modpow(ll a, ll n) {
   ll pow = 1;
   while (n > 0) {
