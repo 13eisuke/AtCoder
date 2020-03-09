@@ -3,6 +3,9 @@ using namespace std;
 
 typedef long long ll;
 
+template<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b; return 1; } return 0; }
+template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }
+
 // 最大公約数
 ll gcd(ll a, ll b)
 {
@@ -41,3 +44,15 @@ struct UnionFind
     bool same(int x, int y) { return root(x) == root(y); }
     int size(int x) { return -d[root(x)]; }
 };
+
+// ワーシャルフロイド
+// n頂点
+void warshallfloyd(int n) {
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            for (int k = 0; k < n; k++) {
+                //chmin(d[j][k], d[j][i] + d[i][k]);
+            }
+        }
+    }
+}
