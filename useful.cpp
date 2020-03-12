@@ -56,3 +56,35 @@ void warshallfloyd(int n) {
         }
     }
 }
+
+// ダイクストラ
+struct Edge {
+    int to;     // 辺の行き先
+    int cost; // 辺の重み
+    Edge(int t, int c) : to(t), cost(c) { }
+};
+
+vector<ll> dijkstra(vector<vector<Edge>> &g, int s) {
+    vector<ll> dist(g.size(), inf);
+
+    using Pli = pair<ll, int>;
+    priority_queue< Pli, vector<Pli>, greater<Pli> > que;
+    dist[s] = 0;
+    que.emplace(dist[s], s);
+
+    while (!que.empty()) {
+        ll cost;
+        int idx;
+        tie(cost, idx) = que.top();
+        que.pop();
+        if (dist[idx] < cost) continue;
+
+        for (auto &e: g[idx]) {
+            auto next_cost = cost + e.cost;
+            if (dist[e.to] <= next_cost) continue;
+            dist[e.to] = next_cost;
+            que.emplace(dist[e.to], e.to);
+        }
+    }
+    return dist;
+}
