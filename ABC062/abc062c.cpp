@@ -6,7 +6,6 @@ typedef pair<ll, ll> P;
 
 const ll MOD = 1e9 + 7;
 const ll inf = 1LL<<60;
-const int int_inf = 100000000;
 const double eps = 1e-9;
 
 const int dx[4] = { 1, 0, -1, 0 };
@@ -17,22 +16,11 @@ template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; }
 
 int main()
 {
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    
-    int n;
-    cin >> n;
-    vector<vector<int>> g(n);
+    int h, w;
+    cin >> h >> w;
 
-    int a, b;
-    for (int i = 0; i < n-1; i++) {
-        cin >> a >> b;
-        a--; b--;
-        g[a].push_back(b);
-        g[b].push_back(a);
-    }
     
+
     return 0;
 }
-
 

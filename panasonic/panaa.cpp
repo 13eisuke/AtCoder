@@ -20,19 +20,10 @@ int main()
     cin.tie(0);
     ios::sync_with_stdio(false);
     
-    int n;
-    cin >> n;
-    vector<vector<int>> g(n);
-
-    int a, b;
-    for (int i = 0; i < n-1; i++) {
-        cin >> a >> b;
-        a--; b--;
-        g[a].push_back(b);
-        g[b].push_back(a);
-    }
-    
+    int n[32] = {1, 1, 1, 2, 1, 2, 1, 5, 2, 2, 1, 5, 1, 2, 1, 14, 1, 5, 1, 5, 2, 2, 1, 15, 2, 2, 5, 4, 1, 4, 1, 51};
+    int c;
+    cin >> c;
+    cout << n[c-1] << endl;
     return 0;
 }
-
 

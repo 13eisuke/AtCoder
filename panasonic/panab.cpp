@@ -20,19 +20,10 @@ int main()
     cin.tie(0);
     ios::sync_with_stdio(false);
     
-    int n;
-    cin >> n;
-    vector<vector<int>> g(n);
-
-    int a, b;
-    for (int i = 0; i < n-1; i++) {
-        cin >> a >> b;
-        a--; b--;
-        g[a].push_back(b);
-        g[b].push_back(a);
-    }
-    
+    ll n, m;
+    cin >> n >> m;
+    if (n == 1 or m == 1) cout << 1 << endl;
+    else cout << ((n+1)/2)*((m+1)/2) + (n-(n+1)/2)*(m-(m+1)/2) << endl;
     return 0;
 }
-
 

@@ -15,24 +15,17 @@ const int dy[4] = { 0, 1, 0, -1 };
 template<class T> inline bool chmax(T& a, T b) { if (a < b) { a = b; return 1; } return 0; }
 template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; } return 0; }
 
+ll dp[50];
+
 int main()
 {
-    cin.tie(0);
-    ios::sync_with_stdio(false);
-    
-    int n;
-    cin >> n;
-    vector<vector<int>> g(n);
+    ll n, x;
+    cin >> n >> x;
 
-    int a, b;
-    for (int i = 0; i < n-1; i++) {
-        cin >> a >> b;
-        a--; b--;
-        g[a].push_back(b);
-        g[b].push_back(a);
+    dp[0] = 1;
+    for (int i = 1; i < 50; i++){
+        d[i] = 
     }
-    
     return 0;
 }
-
 

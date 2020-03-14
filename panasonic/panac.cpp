@@ -17,22 +17,19 @@ template<class T> inline bool chmin(T& a, T b) { if (a > b) { a = b; return 1; }
 
 int main()
 {
-    cin.tie(0);
-    ios::sync_with_stdio(false);
+    //cin.tie(0);
+    //ios::sync_with_stdio(false);
     
-    int n;
-    cin >> n;
-    vector<vector<int>> g(n);
 
-    int a, b;
-    for (int i = 0; i < n-1; i++) {
-        cin >> a >> b;
-        a--; b--;
-        g[a].push_back(b);
-        g[b].push_back(a);
-    }
-    
+    long double a, b, c;
+    cin >> a >> b >> c;
+
+    if (c- (a+b) < 0) {
+        cout << "No" << endl;
+        return 0;
+    } 
+    if (4.0*a*b < (c*c - 2.0*(a+b)*c + (a+b)*(a+b))) cout << "Yes" << endl;
+    else cout << "No" << endl;
     return 0;
 }
-
 

@@ -19,6 +19,7 @@ int main()
     for (int i = 0; i < int(s.size()); i++) {
         s[i] = ((s[i] - 'A' + n) % 26) + 'A'; 
     }
+    
     cout << s << endl;
     return 0;
 }
