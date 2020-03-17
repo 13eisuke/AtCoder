@@ -21,7 +21,9 @@ int main()
 		ll r = N % i;
 		ll temp = max(0LL, i - K);
 		res += p * temp;
+		//cout << res << endl;
 		res += max(0LL, r - K + 1);
+		//cout << res << endl;
 	}
     
 	if (K == 0) {
