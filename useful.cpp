@@ -46,12 +46,11 @@ struct UnionFind
 };
 
 // ワーシャルフロイド
-// n頂点
-void warshallfloyd(int n) {
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            for (int k = 0; k < n; k++) {
-                //chmin(d[j][k], d[j][i] + d[i][k]);
+void warshallfloyd(vector< vector< int > >& graph) {
+    for (int i = 0; i < graph.size(); i++) {
+        for (int j = 0; j < graph.size(); j++) {
+            for (int k = 0; k < graph.size(); k++) {
+                chmin(graph[j][k], graph[j][i] + graph[i][k]);
             }
         }
     }
