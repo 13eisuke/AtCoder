@@ -58,7 +58,7 @@ int main()
             return 0;
         }
         ll now = d[i];
-        (ans *= modpow(bef, now))%=MOD;
+        (ans *= mod_pow(bef, now, MOD))%=MOD;
         bef = d[i];
     }
     
